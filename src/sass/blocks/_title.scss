@@ -1,0 +1,60 @@
+.title {
+    font-weight: 700;
+    font-style: 36px;
+    // line-height: 60px;
+    
+    
+    &_fz14 {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &_fz16 {
+        font-size: 16px;
+        line-height: 16px;
+        color: black;
+        span {
+            text-decoration-line: underline;
+        }
+    }
+    &_fz20 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    &_fz21 {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &_fz36 {
+        font-size: 36px;
+        color: black;
+        line-height: 60px;
+        
+    }
+    &_fz27 {
+        font-size: 27px;
+        line-height: 24px;
+        color: white;
+        text-transform: uppercase;
+        margin-left: 60px;
+        
+    }
+    &_white {
+        color: white;
+        text-transform: uppercase;
+        margin-left: 60px;
+    }
+    &__section-title {
+        text-align: center;
+        position: relative;
+        @include before_circle;
+        &:before {
+            top: -9px;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+    }
+    &__section-subtitle {
+        text-align: center;
+    }
+}
