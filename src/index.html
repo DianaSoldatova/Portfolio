@@ -109,7 +109,7 @@
             Меня  зовут  <span>Диана  Солдатова</span>
         </div>
         <h1 class="title title_fz36 promo__title title_white"> Дело, которым я живу </h1>
-        <h2 class="title title_fz27 "> Верстка | Frontend </h2>
+        <h2 class="title title_fz27 title_white"> Верстка | Frontend </h2>
         <div class="promo__btns">
             <a href="#" class="promo__link btn">Портфолио</a>
             <a href="#" class="promo__link">Обо мне</a>
@@ -120,7 +120,17 @@
     <div class="container">
             <div class="about__wrapper">
                 <div class="about__photo">
-                    <img src="img/portfolio.jpg" alt="me">
+                    <!-- <img 
+                    srcset="img/portfolio-min.jpg 300w, img/portfolio.jpg 400w" 
+                    sizes="(max-width: 576px) 280px, (min-width: 577px) 400px" 
+                    src="img/portfolio.jpg" alt="me"> -->
+                    <picture>
+                        <source media="(max-width: 576px)" srcset="img/portfolio-min.jpg">
+                        <source media="(min-width: 577px)" srcset="img/portfolio.jpg">
+                        <img src="img/portfolio.jpg" alt="photo">
+
+                    </picture>
+                   
                 </div>
                 <div class="about__descr">
                     <h2 class="title title_fz16 about__title">Обо мне</h2>
@@ -192,6 +202,7 @@
                             </div>
                             <div class="resume__item-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
                         </div>
+                        
                     </li>
                 </ul>
             </div>
@@ -223,38 +234,44 @@
         <div class="divider"></div>
         <div class="skills__wrapper">
             <div class="skills__wrapper-block">
-                <img src="icons/skills/html5.svg" alt="html" class="skills__wrapper-img">
+                <div class="skills__wrapper-img">
+                    <img src="icons/skills/html5.svg" alt="html">
+                </div>
                 <div class="title title_fz21 skills__wrapper-title">HTML5</div>
                 <div class="skills__wrapper-descr">Именно он создает каркас вашего сайта или приложения, а пятая версия позволит мне создавать более SEO-оптимизированную структуру вашего продукта</div>
             </div>
             <div class="skills__wrapper-block">
-                <img src="icons/skills/css3.svg" alt="css" class="skills__wrapper-img">
+                <div class="skills__wrapper-img">
+                    <img src="icons/skills/css3.svg" alt="css" >
+                </div>
                 <div class="title title_fz21 skills__wrapper-title">CSS3</div>
                 <div class="skills__wrapper-descr">Этот язык стилей позволяет мне создавать абсолютно любой внешний вид вашего сайта или приложения. Все ограничивается только вашей фантазией!</div>
             </div>
             <div class="skills__wrapper-block">
-                <img src="icons/skills/js.svg" alt="js" class="skills__wrapper-img">
+                <div class="skills__wrapper-img"><img src="icons/skills/js.svg" alt="js" ></div>
+                
                 <div class="title title_fz21 skills__wrapper-title">Java Script</div>
                 <div class="skills__wrapper-descr">Этот язык программирования позволяет оживить все что угодно: слайдеры, окна, подсказки, вкладки, получение данных от сервера и многое другое</div>
             </div>
             <div class="skills__wrapper-block">
-                <img src="icons/skills/jquery.svg" alt="jQuery" class="skills__wrapper-img">
-                <div class="title title_fz21 skills__wrapper-title skills__wrapper-title-mongo">Jquery</div>
+
+                <div class="skills__wrapper-img"><img src="icons/skills/jquery.svg" alt="jQuery" ></div>
+                <div class="title title_fz21 skills__wrapper-title">Jquery</div>
                 <div class="skills__wrapper-descr">Библиотека Jquery позволит ускорить разработку. Без необходимости интегрировать в проект мы её не будем, но навык работы с ней присутствует</div>
             </div>
             <div class="skills__wrapper-block">
-                <img src="icons/skills/react.svg" alt="React" class="skills__wrapper-img">
+                <div class="skills__wrapper-img"><img src="icons/skills/react.svg" alt="React" ></div>
                 <div class="title title_fz21 skills__wrapper-title">React</div>
                 <div class="skills__wrapper-descr">Эта библиотека позволяет создавать web-приложения. Мы можем создать максимально интерактивный продукт именно под ваши цели</div>
             </div>
             <div class="skills__wrapper-block">
-                <img src="icons/skills/node.js.svg" alt="Node" class="skills__wrapper-img">
+                <div class="skills__wrapper-img"><img src="icons/skills/node.js.svg" alt="Node" ></div>
                 <div class="title title_fz21 skills__wrapper-title">Node</div>
                 <div class="skills__wrapper-descr">Эта платформа позволяет создавать бэкенд для вашего продукта - “мозги”, которые будут выполнять действия, которые пользователь не видит</div>
             </div>
             <div class="skills__wrapper-block">
-                <img src="icons/skills/mongo.db.svg" alt="mongo" class="skills__wrapper-img">
-                <div class="title title_fz21 skills__wrapper-title skills__wrapper-title-mongo">Mongo.db</div>
+                <div class="skills__wrapper-img"><img src="icons/skills/mongo.db.svg" alt="mongo" ></div>
+                <div class="title title_fz21 skills__wrapper-title">Mongo.db</div>
                 <div class="skills__wrapper-descr">Это нереляционная база данных, которая будет хранить данные вашего сайта или приложения</div>
             </div>
             
@@ -385,26 +402,30 @@
                     <div class="title title_fz14 contacts-text">Или оставьте ваши данные и я сама вам напишу:</div>
                     <form action="#" class="contacts__form">
                         <div class="contacts__input">
-                            <input name="name" id="name" type="text">
+                            <input required name="name" id="name" type="text">
                             <label for="name">Ваше имя</label>
                         </div>
                         <div class="contacts__input">
-                            <input name="email" id="email" type="email">
+                            <input required name="email" id="email" type="email">
                             <label for="email">Ваша почта</label>
                         </div>
                         <div class="contacts__textarea">
                             <textarea name="text" id="text" ></textarea>
                             <label for="text">Ваше сообщение</label>
                         </div>
-                        <div>
+                        <div class="contacts__triggers">
                             <button class="contacts__btn btn">Отправить сообщение</button>
+                            <div class="contacts__policy">
+                                <input required type="checkbox">
+                                <span>Я согласен(а) с <a href="/policy.html">политикой конфиденциальности</a></span>
+                            </div>
                         </div>
 
                     </form>
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
 
     <script src="js/script.js"></script>
 </body>

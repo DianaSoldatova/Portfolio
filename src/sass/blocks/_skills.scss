@@ -17,15 +17,13 @@
             
          }
         &-img {
-            // display: flex;
-            // align-items: center;
-            // q                                                                                                                                                                                                                                                                                        
+            display: flex;
+            align-items: center;
+            min-height: 65px;                                                                                                                                                                                                                                                                                      
         } 
         &-title {
             margin-top: 20px;
-            &-mongo {
-                margin-top: 32px;
-            }
+           
         }
         &-descr {
             margin-top: 15px;
